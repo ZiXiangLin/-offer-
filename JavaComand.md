@@ -51,6 +51,7 @@ String[] AB = (A + " " + B).split(" ");
 
 // str methods:
 int length = str.length();
+for(char c: str.toCharArray()) {}
 
 // list methods:
 List<Integer> list = new ArrayList<>();
