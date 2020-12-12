@@ -1,14 +1,31 @@
 ```java
-// Math packages:
+// 1 Math packages:
 int temp = (int)Math.pow(a,3);
 Math.max(1,2);
 Math.sqrt(8);
 int ans = (int)Math.exp(0.5*Math.log(x));
 
-// convert char to int:
-Character.getNumericValue(numChar)
+// 2 covert types:
+// 1) convert char to int:
+Character.getNumericValue(numChar);
+// 2) convert str to char/ int/ long:
+String str = "babababa bababala";
+char c = str.charAt(0);
+char[] arr = str.toCharArray();
+int i = Integer.parseInt([String]);
+String sub = str.substring(p,i);
+Long numl = Long.parseLong(sub);
+// 3) convert to str:
+String s = String.valueOf('c');
+String s = String.valueOf(integer);
+String str2 = String.valueOf(9);
+String str3 = 9 + ":" + 5;
+String[] AB = (A + " " + B).split(" ");
 
-// sort:
+
+  
+
+// 3 sort:
 int[] a = {2,3,51,24,56,3,4,2};
 Arrays.sort(a);
 List<Integer> list = new ArrayList<>();
@@ -34,33 +51,23 @@ List<Map.Entry<Integer, Integer>> list = new ArrayList<Map.Entry<Integer, Intege
         int ans = list.get(1).getKey();
             
 
-// convert str to char/ int/ long:
-String str = "babababa bababala";
-char c = str.charAt(0);
-char[] arr = str.toCharArray();
-int i = Integer.parseInt([String]);
-String sub = str.substring(p,i);
-Long numl = Long.parseLong(sub);
-
-// convert to str:
-String s = String.valueOf('c');
-String s = String.valueOf(integer);
-String str2 = String.valueOf(9);
-String str3 = 9 + ":" + 5;
-String[] AB = (A + " " + B).split(" ");
-
-// str methods:
+// 4 data structure methods:
+// 1) str methods:
 int length = str.length();
 for(char c: str.toCharArray()) {}
-
-// list methods:
+str.replace(" ","%20");      
+// 2) sb method:            
+StringBuilder sb = new StringBuilder();
+int l = sb.length();
+sb.append("sbsbsb");
+String str = sb.toString();      
+// 3) list methods:
 List<Integer> list = new ArrayList<>();
 List<Integer> list = new ArrayList<Integer>();
 List<List<Integer>> ans = new ArrayList<>();
 List<List<Integer>> solution = new LinkedList<List<Integer>>();
-
 Object[] ob = list.get(i);
-list.add(0);
+public void add(int index, E element)
 ans.add(new ArrayList<>(list));
 list.remove(index);
 list.remove((Integer)25); 
@@ -69,29 +76,25 @@ Collections.sort(list);
 Object[] o = list.toArray(res);
 String[]  arr = new String[list.size];  list.toArray(arr);//此时arr就有了list中的值了
 String[] arr = (String[])list.toArray(new String[0]);
-
 Iterator iter = even.iterator();
 while(iter.hasNext()){
    ans[i++] = (int)iter.next();
 }
-
-// stack methods:
+// 4) stack methods:
 Stack<Integer> stack = new Stack<Integer>();
 int length = stack.size();
 stack.push(object);
 Object object = stack.pop();
 Object object = stack.peek();
 boolean stack.isEmpty();
-
-// queue methods:
+// 5) queue methods:
 Queue<Integer> queue = new LinkedList<Integer>();
 int length = queue.size();
 queue.offer(object);
 Object object = queue.poll();
 Object object = queue.peek();
 boolean queue.isEmpty();
-
-// hashmap methods:
+// 6) hashmap methods:
 HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 HashMap<Integer, String> fizzBizzDict =
         new HashMap<Integer, String>() {
@@ -99,9 +102,7 @@ HashMap<Integer, String> fizzBizzDict =
             put(3, "Fizz");
             put(5, "Buzz");
           }
-        };
-
-            
+        };   
 int value = map.get(key);
 int score = map.getOrDefault("score", 80);
 int length = map.size();
@@ -109,34 +110,22 @@ map.put(key,val);
 map.containsKey();
 map.containsValue();
 map.remove(key);
-
 for (Integer i : map.keySet()) {
    Integer count = map.get(i);
 }
-for(String key : map.keySet()){
-            
+for(String key : map.keySet()) {        
 Iterator iter = map.entrySet().iterator();
 while(iter.hasNext()){
 	Map.Entry e = (Map.Entry)iter.next();
   int a = (int)e.getKey();
   int b = (int)e.getValue();
 }
+  
 // iteraotr while remove elem：
 // https://www.baeldung.com/java-concurrentmodificationexception
 iter.remove();
-
-
-
-
-
-
-
-
 import java.util.*;
-
-//Author:Hibiki last modified in 2018.10.04
 public class HashMapSort {
-
     public static void main(String[] args) {
         Map phone = new HashMap();
         phone.put("Apple", 7299);
@@ -181,10 +170,6 @@ public class HashMapSort {
 
 栈、队列、树、图时从逻辑结构去抽象的，映射到内存中，也是顺序存储结构和链式存储结构。
 
-
-
-
-
 | 数据结构 | 查找                                       | 插入删除 |
 | -------- | :----------------------------------------- | -------- |
 | 数组     | O(1) (指定下标)  O(n) -> O(logn)（指定值） | O(n)     |
@@ -199,8 +184,6 @@ public class HashMapSort {
 要新增或查找某个元素，通过把当前元素的关键字，通过某个函数映射到数组中的某个位置
 
 存储位置=f（关键字） f：哈希函数
-
-
 
 哈希冲突/哈希碰撞： 两个不同的元素，通过哈希函数的出的实际存储地址相同
 
