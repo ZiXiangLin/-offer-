@@ -8,3 +8,5 @@ public class Solution {
         return num1;
     }
 }
+
+// （a^b) ^ ((a&b)<<1) 
